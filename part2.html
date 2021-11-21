@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<script>
+    // console.log(window);
+    // alert(window.innerWidth);
+    // alert(window.innerHeight);
+
+    //javascript function declear and print
+    function start(){
+        console.log('Start');
+    }
+
+    function process(){
+        setTimeout(function (){
+            console.log('process');
+        },1000);
+    }
+
+    function finish(){
+        console.log('finished');
+    }
+    start();
+    process();
+    finish();
+
+    //json variable example
+    var myJson = {
+        name: 'Nur Alam',
+        web: 'nur.com',
+        skills:['html','css'],
+        friends:[
+            {name: 'demo name 1', web:'demoname1.com'},
+            {name: 'demo name 2', web:'demoname2.com'}
+        ]
+    }
+
+    console.log(myJson.friends[1].name);
+</script>
+</body>
+</html>
