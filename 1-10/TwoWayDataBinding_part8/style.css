@@ -1,0 +1,14 @@
+#app{
+    padding: 33px;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+}
+
+button{
+    padding: 5px 11px;
+    margin: 5px;
+}
