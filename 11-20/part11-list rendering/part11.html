@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Event Modifiers</title>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script src="vue.global.js"></script>
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+           href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="#">HOME</a>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="#band">BAND</a>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="#tour">TOUR</a>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="#contact">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a class="w3-bar-item w3-button" href="#">Merchandise</a>
+                <a class="w3-bar-item w3-button" href="#">Extras</a>
+                <a class="w3-bar-item w3-button" href="#">Media</a>
+            </div>
+        </div>
+        <a class="w3-padding-large w3-hover-red w3-hide-small w3-right" href="javascript:void(0)"><i
+                class="fa fa-search"></i></a>
+    </div>
+
+    <div id="app">
+        <h3>Skills</h3>
+        <input type="text" v-model="newSkill.name">
+        <button type="submit" @click.prevent="newSkillAdd">Add Skill</button>
+        <ul>
+            <li v-for="(skill, i) in skills" @click="removeSkill(i)" :key="skill.name">
+                <p>
+                    {{i+1   }}. {{skill.name}},({{skill.exp}})
+                    <br>
+                    <input type="text" placeholder="remark" @click.stop>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</div>
+</body>
+</html>
