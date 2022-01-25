@@ -31,6 +31,11 @@ new Vue({
        },
         changeUser(){
             return this.title === 'Title Name' ? true : false;
+        },
+        update(){
+           setTimeout(()=>{
+              this.title = 'My name is Nur';
+           },2000);
         }
     }
 });

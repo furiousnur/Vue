@@ -8,21 +8,26 @@
 </head>
 <body>
     <div id="app">
+        <h4>Normal Data show</h4>
         <p>{{title}}</p>
         <p>{{isItTrue}}</p>
+        <h4>For Loop Data show</h4>
         <p v-for="(car, index) in cars">
             {{index+1}}: {{car}}
         </p>
         <hr>
+        <h4>Object Data show</h4>
         <p>{{robots.name}}</p>
         <hr>
+        <h4>Object Foor Loop Data show</h4>
         <p v-for="(value, key, index) in user">
             {{index+1}}: {{key}}: {{value}}
         </p>
+        <h4>Method Data show</h4>
         <p>{{greeting()}}</p>
-        <br><br>
         <p>{{Testing()}}</p>
         <p>{{Demo()}}</p>
+        <h4>Image Data show Using Directives</h4>
         <img v-bind:src="src" v-bind:alt="alt">
         <hr>
         <a v-bind:href="link" target="_blank">Click me</a>
@@ -30,12 +35,17 @@
         <p v-text="myText"></p>
         <p v-html="myHtml"></p>
         <hr>
+        <h4>If else Condition</h4>
         <p v-if="user.age >= user.greaterAge">You are looking so beautiful</p>
         <p v-else-if="user.name=='Nur'">my name is {{user.name}}</p>
         <p v-else>You are not looking good</p>
         <hr>
         <p v-if="changeUser()">Hello Nur</p>
         <p v-else>You are not looking good</p>
+        <h4>V-once Data show</h4>
+        <h5 v-once>{{title}}</h5>
+        <h5>{{title}}</h5>
+        {{update()}}
     </div>
 <script src="app.js"></script>
 </body>
