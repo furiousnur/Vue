@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>V-Model|Vue Js</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h2>V Model</h2>
+    <form action="" @submit.prevent="handleForm">
+        <label>First Name</label>
+        <input type="text" v-model="formData.firstName">
+        <hr>
+        <label>Last Name</label>
+        <input type="text" v-model="formData.lastName">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Computed</h2>
+    <button @click="a++">Add A</button>
+    <button @click="b++">Add B</button>
+
+    <p>A = {{a}}</p>
+    <p>B = {{b}}</p>
+    <p>Default Salary = {{salary}}</p>
+
+    <p>Salary + A = {{addToA}}</p>
+    <p>Salary + B = {{addToB}}</p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
