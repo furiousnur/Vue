@@ -22,6 +22,13 @@
         <hr>
         <p v-text="myText"></p>
         <p v-html="myHtml"></p>
+        <hr>
+        <p v-if="user.age >= user.greaterAge">You are looking so beautiful</p>
+        <p v-else-if="user.name=='Nur'">my name is {{user.name}}</p>
+        <p v-else>You are not looking good</p>
+        <hr>
+        <p v-if="changeUser()">Hello Nur</p>
+        <p v-else>You are not looking good</p>
     </div>
 <script src="app.js"></script>
 </body>

@@ -15,6 +15,12 @@ new Vue({
        link: "https://google.com",
        myText: "using directive",
        myHtml: "<strong>Hello Nami</strong>",
+
+       user: {
+           name: 'Nur',
+           age: 20,
+           greaterAge: 23
+       }
    },
     methods: {
        Testing: function (){
@@ -22,6 +28,9 @@ new Vue({
        },
         Demo: function (){
            return this.robots.name;
-       }
+       },
+        changeUser(){
+            return this.title === 'Title Name' ? true : false;
+        }
     }
 });
