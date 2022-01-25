@@ -94,9 +94,12 @@
                             <div class="bus__driver">Driver</div>
                         </div>
                         <div class="seats">
-                            <div :class="{ 'seat--sold': seat.type === 'sold', 'seat--booked': seat.type === 'booked', 'seat--selected': seat.type === 'selected' }"
-                                    :key="seat.name" @click="handleClick(i)"
-                                    class="seat" v-for="(seat, i) in seats" >
+                            <div :class="{
+                                'seat--sold': seat.type === 'sold',
+                                'seat--booked': seat.type === 'booked',
+                                 'seat--selected': seat.type === 'selected' }"
+                                :key="seat.name" @click="handleClick(i)"
+                                class="seat" v-for="(seat, i) in seats" >
                                 {{seat.name}}
                             </div>
                         </div>

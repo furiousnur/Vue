@@ -187,7 +187,7 @@ var app = Vue.createApp({
             }
 
             if (clickedSeat.type === "available" && this.selectedSeats.length > 2) {
-                alert("You can select more than 3 seats!");
+                alert("You can not select more than 3 seats!");
                 return;
             }
 
