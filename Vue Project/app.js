@@ -10,5 +10,13 @@ new Vue({
        greeting: ()=>{
            return "Hello World";
        }
-   }
+   },
+    methods: {
+       Testing: function (){
+           return this.title;
+       },
+        Demo: function (){
+           return this.robots.name;
+       }
+    }
 });
