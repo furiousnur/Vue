@@ -10,8 +10,15 @@
     <div id="app">
         <p>{{title}}</p>
         <p>{{isItTrue}}</p>
-        <p>{{cars[2]}},{{cars[1]}}</p>
+        <p v-for="(car, index) in cars">
+            {{index+1}}: {{car}}
+        </p>
+        <hr>
         <p>{{robots.name}}</p>
+        <hr>
+        <p v-for="(value, key, index) in user">
+            {{index+1}}: {{key}}: {{value}}
+        </p>
         <p>{{greeting()}}</p>
         <br><br>
         <p>{{Testing()}}</p>
