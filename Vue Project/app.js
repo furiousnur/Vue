@@ -9,7 +9,12 @@ new Vue({
        },
        greeting: ()=>{
            return "Hello World";
-       }
+       },
+       src: "https://picsum.photos/id/237/200/300",
+       alt: "Alter Image",
+       link: "https://google.com",
+       myText: "using directive",
+       myHtml: "<strong>Hello Nami</strong>",
    },
     methods: {
        Testing: function (){
