@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Vue Js</title>
+    <script src="../vue.js"></script>
+    <style>
+        .box{
+            background-color: red;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2>Click Event</h2>
+    <h3>{{name}}</h3>
+    <button @click="changeName()">Click Me</button>
+    <hr>
+    <div class="box" @mousemove="getCoord">
+        <h3>Hove Me</h3>
+    </div>
+    <p>X: {{x}}</p>
+    <p>Y: {{y}}</p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
