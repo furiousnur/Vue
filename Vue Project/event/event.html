@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Vue Js</title>
+    <title>Event|Vue Js</title>
     <script src="../vue.js"></script>
     <style>
         .box{
@@ -19,11 +19,21 @@
     <h3>{{name}}</h3>
     <button @click="changeName()">Click Me</button>
     <hr>
-    <div class="box" @mousemove="getCoord">
+    <h2>Mousemove Hover Event</h2>
+    <div class="box" @mousemove="getCoord()">
         <h3>Hove Me</h3>
     </div>
     <p>X: {{x}}</p>
     <p>Y: {{y}}</p>
+    <hr>
+    <h2>Argument & modifier Event</h2>
+    <h3>{{name}}</h3>
+    <button @click.right="updateName('Nur Alam', $event)">Update Name Click Right</button>
+    <h2>Prevent argument and modifier</h2>
+    <form action="" @submit.prevent="handleForm">
+        <input type="text">
+        <button type="submit">Submit</button>
+    </form>
 </div>
 <script src="app.js"></script>
 </body>

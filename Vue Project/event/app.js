@@ -1,7 +1,7 @@
 new Vue({
    el: "#app",
    data: {
-      name: "Nur Alam",
+      name: "Demo Name",
        x: 0,
        y: 0,
    },
@@ -12,6 +12,13 @@ new Vue({
         getCoord(){
             this.x = event.clientX;
             this.y = event.clientY;
+        },
+        updateName(newName,event){
+            this.name = newName;
+            console.log(event);
+        },
+        handleForm(){
+            console.log('submit form');
         }
     }
 });
