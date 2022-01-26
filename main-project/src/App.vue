@@ -4,6 +4,8 @@
         <Footer/>
         <p>{{name}}</p>
         <p>{{age}}</p>
+        <hr>
+        <demo-component></demo-component>
       </div>
  </template>
 

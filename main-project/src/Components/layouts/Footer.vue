@@ -1,3 +1,6 @@
 <template>
-  <div>Footer</div>
+  <div>
+    Footer
+    <demo-component></demo-component>
+  </div>
 </template>
