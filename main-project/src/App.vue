@@ -1,9 +1,9 @@
  <template>
       <div class="div">
-        <Header :students="students"/>
+        <Header :students="students" :name="name" @updateName="name=$event"/>
         <Footer/>
         <hr>
-        <demo-component></demo-component>
+        <demo-component :firstName="fName" :lastName="lName" :age="age" @updateValue="fName = $event"></demo-component>
       </div>
  </template>
 
@@ -14,7 +14,10 @@
           data(){
               return{
                   name: 'Nur',
-                  students: ['Nur', 'Delo', 'Trisha']
+                  students: ['Nur', 'Delo', 'Trisha'],
+                  fName: 'Jon',
+                  lName: 'Doe',
+                  age: 26
               }
           },
         components: {

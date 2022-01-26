@@ -4,6 +4,8 @@
         <ul>
             <li v-for="student in students" :key="student">{{student}}</li>
         </ul>
+        <p>{{name}}</p>
+        <button @click="updateName">Click Me</button>
     </div>
 </template>
 
@@ -14,7 +16,16 @@
              students: {
                   type: Array,
                   required: true
-             }
-        }
+             },
+              name:{
+                  type: String,
+                  required: true
+              }
+        },
+      methods:{
+           updateName(){
+                this.$emit('updateName','Nur Alam');
+           }
+      }
     }
 </script>
