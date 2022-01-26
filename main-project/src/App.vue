@@ -1,9 +1,7 @@
  <template>
       <div class="div">
-        <Header/>
+        <Header :students="students"/>
         <Footer/>
-        <p>{{name}}</p>
-        <p>{{age}}</p>
         <hr>
         <demo-component></demo-component>
       </div>
@@ -16,7 +14,7 @@
           data(){
               return{
                   name: 'Nur',
-                  age: 26
+                  students: ['Nur', 'Delo', 'Trisha']
               }
           },
         components: {
